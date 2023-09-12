@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Sacramento&display=swap"
+        rel="stylesheet">
+    <style>
+        html{
+            overflow-x: hidden;
+        }
+        @media (max-width: 95rem){
+            .leftsection{
+            max-width: 130rem;
+            padding: 0 3.2rem;
+           }
+           
+        }
+        @media (max-width: 75rem){
+           html{
+          font-size: 56.25%;
+           }
+           .container
+           {
+            max-width: 110rem;
+           }
+           .grid{
+            gap: 4.8rem;
+        }
+           
+        }
+
+        .headline h1{
+            max-width: 43rem;
+            padding: 0 3.2rem;
+            
+        }
+
+        .headline {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            background-color: #493eab;
+            animation: colorChange;
+            overflow-x: hidden;
+        }
+       
+       
+
+        .headline h1 {
+            font-size: 60px;
+            color: #fff;
+            animation: colorChange;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(2, 2, 53);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+           
+           
+        }
+        body{
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background-color: rgb(35, 35, 84);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(23, 23, 107);
+            font-size: 1.02rem;
+        }
+
+
+
+
+
+        #firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 80px 0;
+        }
+
+        .firstsection>div {
+            width: 40%;
+
+        }
+
+        .leftsection {
+            font-size: 3rem;
+
+        }
+
+        .leftsection .button {
+            padding: 40px 0;
+        }
+
+        .leftsection .btn {
+            padding: 12px;
+            background: #0f1256;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+
+        }
+
+        .rightsection img {
+            width: 80%;
+
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+
+
+        .about-content {
+            text-align: center;
+            padding: 50px 0;
+            max-width: 80vw;
+            margin: auto;
+            height: 30vh;
+        }
+
+        .about-content h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            font-size: 18px;
+            color: gray;
+        }
+
+
+
+
+        .education-content {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .education-content h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .education-content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .education-content p {
+            font-size: 18px;
+            color: gray;
+        }
+
+
+
+
+        .skill-content {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .skill-content h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .skill-content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .skill-content p {
+            font-size: 18px;
+            color: gray;
+        }
+
+
+
+
+
+        .project-content {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .project-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .project-item {
+            margin-bottom: 30px;
+        }
+
+        .project-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .project-item p {
+            font-size: 18px;
+            color: gray;
+        }
+
+
+
+        .certificates-content {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .certificates-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .certificates-item {
+            margin-bottom: 30px;
+        }
+
+        .certificates-item img {
+            max-width: 350px;
+            margin: 0 auto;
+            display: block;
+        }
+
+
+
+
+        .contact-content {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .contact-content h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            text-align: center;
+
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form label,
+        form input,
+        form textarea {
+            margin-bottom: 10px;
+        }
+
+        form input,
+        form textarea {
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form input,
+        form textarea {
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #2d255e;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .account-content {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .account-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .footer-content p,
+        .social-media-link {
+            margin: 10px 0;
+        }
+
+        .social-media-link a {
+            margin: 0 10px;
+        }
+
+        .social-media-link img {
+
+            margin: 0 5px;
+        }
+
+
+
+        .footer {
+            display: block;
+        }
+
+        .footer-content {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #362b72;
+            color: #fff;
+        }
+
+        .footer-content p,
+        .social-media-link {
+            margin: 10px 0;
+        }
+
+        .social-media-link a {
+            margin: 0 10px;
+        }
+
+        .social-media-link img {
+            text-align: center;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="headline">
+        <h1>Portfolio Website</h1>
+    </div>
+
+
+
+
+
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#firstsection">Home</a>
+                </li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skill">Skills</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--1st part -->
+        <section id="firstsection">
+            <div class="leftsection">Hello, I'm <span class="purple">Anjali kumari</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+
+
+
+                <div class="button">
+                    <a
+                        href="https://www.canva.com/design/DAFa2hnU7ew/4yTY62UND86sbEbu3lI3gQ/view?utm_content=DAFa2hnU7ew&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">
+                        <button class="btn">See my resume</button>
+                    
+                    </a>
+                    <a href="https://github.com/Anjalijha89">
+                        <button class="btn">Visit Github</button>
+                    </a>
+
+
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="bg1.png" alt="">
+            </div>
+        </section>
+
+
+
+        <!--2nd part -->
+        <section id="about">
+            <div class="about-content">
+                <h2>About Me</h2>
+                    <br>
+                <p>
+                    I am a Fullstack Web Developer, currently pusuing Bachelor's degree in
+                    <br>
+                    Information Technology from Lakshmi narain college of technology, Bhopal.
+                    <br>
+                    I like coding and web development.
+                    <br>
+                    Currently, I'm learning MernStack.
+
+                </p>
+            </div>
+        </section>
+
+
+
+        <!--3rd part -->
+        <section id="education">
+            <div class="education-content">
+                <h2>Education</h2>
+                <br>
+                <ul>
+                    <li>
+                        <h3>Bachelor Of Technology</h3>
+                        <p>Lakshmi Narain College Of Technology, Bhopal</p>
+                        <P>Year: 2020-2024</P>
+                        <p>CGPA: 8.27</p>
+                        <p>Coures: Information Technology</p>
+                    </li>
+                    <br>
+                    
+                    <li>
+                        <h3>Senior Secondary(XII)</h3>
+                        <P>J.K College, Biraul Darbhanga</P>
+                        <P>Year: 2017-2019</P>
+                        <p>Percentage: 86%</p>
+                        <p>Board: BSEB</p>
+                        <p>Coures: Science</p>
+                    </li>
+                    <br>
+                    
+                    <li>
+                        <h3>Secondary School(X)</h3>
+                        <P>Onkar High School, Biraul Darbhanga</P>
+                        <P>Year: 2016-2017</P>
+                        <p>Percentage: 80%</p>
+                        <p>Board: BSEB</p>
+                </ul>
+            </div>
+        </section>
+
+     
+
+
+        <!--4th part -->
+        <section id="skill">
+            <div class="skill-content">
+                <h2>Skills</h2>
+                <br>
+                <ul>
+                    <li>
+                        <h3> Coursework</h3>
+                        <p>* Data structue and algorithm</p>
+                        <p>* Object oriented programming</p>
+                        <p>* Database management system</p>
+                        <p>* Competitive Programming</p>
+                        <p>* Web development</p>
+                    </li>
+                    <br>
+                    
+                    <li>
+                        <h3> Programming language</h3>
+                        <p>* Java</p>
+                        <p>* C++</p>
+                        <p>* Javascript</p>
+
+                    </li>
+                    <br>
+                    
+                    <li>
+                        <h3> Frontend</h3>
+                        <p>* Html</p>
+                        <p>* Css</p>
+                        <p>* Javascript</p>
+                        <p>* Bootstrap</p>
+                    </li>
+                    <br>
+
+                    <li>
+                        <h3> Backend</h3>
+                        <p>* PHP</p>
+                    </li>
+                    <br>
+
+                    <li>
+                        <h3> Database</h3>
+                        <p>* Sql</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        </section>
+
+
+        
+
+        <!--5th part -->
+        <!--1st project-->
+        <section id="Projects">
+            <div class="project-content">
+                <h2>Projects</h2>
+                <br>
+                <div class="project-item">
+                    <h3> Book Shoppe Website</h3>
+                    <p>User friendly web portal for buying and selling second hand books online. A user can buy the
+                        books or can upload their books to resell them on the online. It saves the time and the user
+                        spending cost. It provides a high level of security with different levels of authentication. The
+                        system makes the overall book management much easier and flexible.</p>
+                    <p>Technology used:</p>
+                    <span class="purple"><b> Html Css Javascript Bootstrap <br> PHP Mysql</b></span>
+                    <div>
+                        <video src="vdo.mp4" controls width="523px"></video>
+                    </div>
+
+                </div>
+
+                <!--2nd project-->
+                <div class="project-item">
+                    <h3>Sorting Visualizer</h3>
+                    <p>It is a web app that arrow the users to visualise a variety of sorting algorithms like selection
+                        sort, bubble sort, insertion sort, merge sort, quick sort, heap sort With the functionality of
+                        speed control and array size control.</p>
+                    <p>Technology used:</p>
+                    <span class="purple"><b> Html Css Javascript Bootstrap </b></span>
+                    <div>
+                        <video src="vdo.mp4" controls width="523px"></video>
+                    </div>
+
+                </div>
+
+
+                <!--3RD project-->
+                <div class="project-item">
+                    <h3>Healthcare portal</h3>
+                    <p>A healthcare portal is a platform that allows patients to schedule appointments with healthcare
+                        providers, such as doctors, nurses and therapists, through the internet.</p>
+                    <p>Technology used:</p>
+                    <span class="purple"><b> Html Css Javascript Bootstrap </b></span>
+                    <div>
+                        <video src="vdo.mp4" controls width="523px"></video>
+                    </div>
+
+                </div>
+
+
+        </section>
+
+
+
+
+        <!--Certificates-->
+        <section id="certificates">
+            <div class="certificates-content">
+                <h2>Certificates</h2>
+                <br>
+                <div class="certificates-item"></div>
+                <img src="coursera_cer.png " controls width="523px" alt="">
+                <img src="c2.png" controls width="523px" alt="">
+                <img src="c3.png" controls width="523px" alt="">
+                <img src="c7.png" controls width="523px" alt="">
+                <img src="c5.png" controls width="523px" alt="">
+
+                <img src="c4.png" controls width="523px" alt="">
+
+
+                <img src="c6.png" controls width="523px" alt="">
+
+            </div>
+
+        </section>
+
+
+        <!--Contact <textarea id="message" name="message" rows="4" required></textarea>-->
+        <section id="contact">
+            <div class="contact-content"></div>
+            <h2>Contact Me</h2>
+            
+            <form action="connect.php" method="post">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email </label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <div class="account-content">
+            <h2>Connect with me</h2>
+            <div class="social-media-link">
+                <a href="https://www.linkedin.com/in/anjali-jha123/" target="_blank">
+                    <img src="pngegg.png" controls width="33px" alt="">
+                </a>
+                <a href="https://github.com/Anjalijha89 " target="_blank">
+                    <img src="pngegg1.png" controls width="44px" alt="">
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+
+            <div class="footer-content">
+                <p> &#169 Anjali kumari. All rights reversed.</p>
+
+                <div class="social-media-link">
+                    <a href="https://www.instagram.com/___anjali___jha___/" target="blank">
+                        <img src="insta.png" controls width="44px" alt="Instagram profile">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100085906887571&sk=about" target="_blank">
+                        <img src="fb.png" controls width="44px" alt="Facebook profile">
+                    </a>
+                    <a href="https://twitter.com/anjalijha89" target="_blank">
+                        <img src="twitter.png" controls width="44px" alt="Twitter profile">
+                    </a>
+                </div>
+            </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Software engineer'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+</body>
+
+</html>
